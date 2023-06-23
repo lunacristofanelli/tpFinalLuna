@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+body{
+    background-image: url(./imagenes/fondo\ index.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.datos-personales{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50vw;
+    height: 120px;
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 10px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+h1{
+    font-family: 'Kaushan Script', cursive;
+    font-size: 40px;   
+}
+
+
+.input-form{
+    padding: 5px;
+    border: 1px;
+    background-color: rgba(0,0,0,0);
+    border-radius: none;
+    
+}
+
+.input-form:hover{
+    transform: scale(1.1);
+    background-color: rgba(0,0,0,0.1);
+}
+
+.label-form{
+    font-family: 'Amatic SC', cursive;
+    font-size: 20px;
+}
+
+.div-boton-continuar{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.boton-continuar {
+    background-color: rgba(0,0,0,0);
+    color: black;
+    padding: 20px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Amatic SC', cursive;
+}
+
+section{
+    height: 100vh;
+}
+
+.header{
+    width: 100%;
+    height: 3rem;
+    background-color: rgb(247, 225, 174);
+    
+}
+
+.conteiner-items{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.conteiner-items li{
+    list-style: none;
+    padding: 3px 5px;
+    line-height: 2.4rem;
+}
