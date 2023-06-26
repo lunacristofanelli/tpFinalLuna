@@ -12,7 +12,7 @@ html{
 
 
 body{
-    background-image: url(./imagenes/fondo\ index.jpg);
+    background-image: url(imagenes/pexels-eva-bronzini-8060220.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -28,35 +28,45 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 50vw;
-    height: 120px;
+    width: 40vw;
+    height: 200px;
     background-color: rgba(0,0,0,0.2);
     border-radius: 10px;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    margin: 60px ;
 }
 
 h1{
     font-family: 'Kaushan Script', cursive;
     font-size: 40px;   
+    margin: 50px;
+    text-align: center;
+}
+
+.form-inicio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 
-.input-form{
+.input-inicio{
     padding: 5px;
     border: 1px;
     background-color: rgba(0,0,0,0);
     border-radius: none;
-    
+    cursor: pointer;
 }
 
-.input-form:hover{
-    transform: scale(1.1);
+.input-inicio:hover{
+    transform: scale(1);
     background-color: rgba(0,0,0,0.1);
 }
 
-.label-form{
-    font-family: 'Amatic SC', cursive;
+.label-inicio{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20px;
+    margin: 3px;
+
 }
 
 .div-boton-continuar{
@@ -69,22 +79,30 @@ h1{
     background-color: rgba(0,0,0,0);
     color: black;
     padding: 20px;
-    font-size: 20px;
-    border: none;
+    font-size: 18px;
     cursor: pointer;
-    font-family: 'Amatic SC', cursive;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: none;
 }
+
+.enviar-btn{
+    background-color: rgba(0,0,0,0);
+    color: black;
+    font-size: 18px;
+    cursor: pointer;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: end; 
+  }
+
+  
 
 section{
     height: 100vh;
 }
 
-.header{
-    width: 100%;
-    height: 3rem;
-    background-color: rgb(247, 225, 174);
-    
-}
 
 .conteiner-items{
     display: flex;
@@ -93,8 +111,12 @@ section{
     align-items: center;
 }
 
-.conteiner-items li{
-    list-style: none;
-    padding: 3px 5px;
-    line-height: 2.4rem;
+a{
+    color: black;
+}
+
+@media screen and (max-width: 767px){
+    h1{
+        font-size: 35px
+    }
 }
