@@ -1,122 +1,322 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    list-style: none;
 }
 
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
 
-body{
-    background-image: url(imagenes/pexels-eva-bronzini-8060220.jpg);
+body {
+    background-image: url(imagenes/annie-spratt-zA7I5BtFbvw-unsplash.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-main{
+main {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+#section-datos-personales {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 26rem;
+    height: 80%;
+}
 
-.datos-personales{
+.conteiner-datos-personales {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 40vw;
-    height: 200px;
-    background-color: rgba(0,0,0,0.2);
-    border-radius: 10px;
-    margin: 60px ;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 18rem;
+    height: 23rem;
+    border-radius: 5px;
 }
 
-h1{
+h1 {
     font-family: 'Kaushan Script', cursive;
-    font-size: 40px;   
-    margin: 50px;
+    font-size: 32px;
     text-align: center;
+    padding: 30px;
+    color: whitesmoke;
+    text-shadow: 2px 2px 5px black;
 }
 
-.form-inicio{
+#form-inicio {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 0.1rem;
+    width: 100%;
+    height: 100%;
 }
 
 
 .input-inicio{
-    padding: 5px;
-    border: 1px;
-    background-color: rgba(0,0,0,0);
-    border-radius: none;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
     cursor: pointer;
+    width: 100%;
+    font-size: 10px;
+    padding: 15px;
 }
 
-.input-inicio:hover{
+.input-inicio:hover {
     transform: scale(1);
-    background-color: rgba(0,0,0,0.1);
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
-.label-inicio{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 20px;
-    margin: 3px;
-
-}
-
-.div-boton-continuar{
+.label-inicio {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 14px;
     display: flex;
-    flex-direction: row;
-    justify-content: end;
+    flex-direction: column;
+    padding: 5px;
+    color: whitesmoke;
+    text-shadow: 0.5px 1px 2px black;
+    padding-left: 25px;
 }
+
 
 .boton-continuar {
-    background-color: rgba(0,0,0,0);
-    color: black;
-    padding: 20px;
-    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0);
+    color: whitesmoke;
+    text-shadow: 0.5px 0.5px 3px black;
+    margin: 5px;
+    font-size: 16px;
     cursor: pointer;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     border: none;
 }
 
-.enviar-btn{
-    background-color: rgba(0,0,0,0);
-    color: black;
-    font-size: 18px;
-    cursor: pointer;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    border: none;
+.btns-form {
     display: flex;
     flex-direction: row;
-    justify-content: end; 
-  }
+    justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 15px;
+}
 
-  
+.btn-form {
+    border: none;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: whitesmoke;
+    text-shadow: 0.5px 0.5px 2px black;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 10px;
+    cursor: pointer;
+}
 
-section{
+section {
     height: 100vh;
 }
 
-
-.conteiner-items{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+a {
+    color: whitesmoke;
 }
 
-a{
-    color: black;
-}
-
-@media screen and (max-width: 767px){
-    h1{
+@media screen and (max-width: 767px) {
+    h1 {
         font-size: 35px
     }
 }
+
+
+
+
+
+
+/* diseño planner */
+
+.bodyCalendar {
+    background: #EEEDDE;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+.containerSelect{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.plannerDiario{
+    font-family: 'Kaushan Script', cursive;
+    color: whitesmoke;
+    text-shadow: 0.5px 0.5px 3px black;
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 20px;
+    text-align: center;
+    text-shadow: 0.5px 0.5px 3px black;
+    color: white;
+    margin: 1rem;
+}
+
+.inputFecha{
+    margin-top: 10px;
+    padding: 8px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    border-color: black;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.containerCard{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 80%;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+.mañana,
+.tarde,
+.noche{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 18rem;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.mañana{
+    background-color: #D8C4B6;
+}
+
+.tarde{
+    background-color: #F2BED1;
+}
+
+.noche{
+    background-color: #EAB2A0;
+}
+
+.textCard{
+    margin-bottom: 1rem;
+    font-size: 2rem;
+
+}
+
+.divDia{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+li{
+    color: whitesmoke;
+}
+
+.divText{
+    display: flex;
+    flex-direction: row;
+}
+
+.inputText{
+    width: 100%;
+    padding: 5px;
+    background-color: transparent;
+    border: none;
+    color: black;
+}
+
+.inputText:focus, 
+.inputDia:focus,
+.inputMes:focus{
+    outline: none;
+    border: none;
+}
+
+.botones{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+}
+
+.btnCalendar{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+img{
+    width: 100%;
+   height:100%;
+}
+
+/* diseño barra navegacion */
+
+.nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.barraNavegacion{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+    color: black;
+    font-size: 15px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+/* diseño galeria carrousel */
+
+.carousel {
+    width: 100rem;
+    overflow: hidden;
+  }
+  
+  .slide {
+    display: flex;
+    flex-direction:column;
+  }
+  
+  .slide img {
+    width: 5rem;
+    height: 5rem;
+  }
+  
+  /* Estilos para los controles de navegación */
+  .carousel-controls {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .carousel-controls button {
+    display: inline-block;
+    background: none;
+    border: none;
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 0 5px;
+  }
+  
