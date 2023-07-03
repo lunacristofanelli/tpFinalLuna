@@ -15,56 +15,52 @@ document.getElementById('form-inicio').addEventListener('submit', function (valu
 
 console.log("luna")
 
-function agregarTarea() {
+function agregarTarea(seccion) {
+    // Obtener el valor del campo de entrada de texto correspondiente a la sección
+    var inputId = "nombreTarea" + seccion;
+    var nuevaTarea = document.getElementById(inputId).value;
 
-    const lista = document.getElementById("lista")
-    const textoTarea = document.getElementById("nombreTarea")
+    // Crear un nuevo elemento de lista
+    var nuevoElemento = document.createElement("li");
 
-    const nuevoElem = document.createElement("li")
+    // Agregar el valor del campo de entrada de texto al nuevo elemento de lista
+    nuevoElemento.appendChild(document.createTextNode(nuevaTarea));
 
-    // console.log(textoTarea)
+    // Crear el checkbox para la tarea
+    var checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.name = "opcion";
 
-    nuevoElem.innerHTML = textoTarea.value
+    // Agregar el checkbox al final del nuevo elemento de lista
+    nuevoElemento.appendChild(checkbox);
 
-    lista.appendChild(nuevoElem)
+    // Obtener la lista correspondiente a la sección
+    var listaId = "lista" + seccion;
+    var lista = document.getElementById(listaId);
+
+    // Agregar el nuevo elemento de lista a la lista existente
+    lista.appendChild(nuevoElemento);
+
+    // Limpiar el campo de entrada de texto
+    document.getElementById(inputId).value = "";
 }
 
-function eliminarTarea() {
-    const lista = document.getElementById("lista")
-    const textoTarea = document.getElementById("nombreTarea")
 
-    // for(let i =0; i < lista.childElementCount; i++) {
-    //     console.log(lista.children[i])
-    // }
+// Función para eliminar una tarea de la lista
+function eliminarTarea(seccion) {
+    // Obtener la lista correspondiente a la sección
+    let listaId = "lista" + seccion;
+    let lista = document.getElementById(listaId);
 
-    if (lista.childElementCount > 0) {
-        lista.removeChild(lista.lastChild)
+    // Obtener el primer elemento de lista de la lista
+    let primerElemento = lista.getElementsByTagName("li")[0];
+
+    // Verificar si hay un elemento para eliminar
+    if (primerElemento) {
+        // Eliminar el primer elemento de lista de la lista
+        lista.removeChild(primerElemento);
     }
 }
 
 //imagenes tipo carrousel//
 
-document.addEventListener("DOMContentLoaded", function() {
-    var slides = document.querySelectorAll(".slide");
-    var currentSlide = 0;
-    var slideInterval = setInterval(nextSlide, 2000);
-  
-    function nextSlide() {
-      slides[currentSlide].style.display = "none";
-      currentSlide = (currentSlide + 1) % slides.length;
-      slides[currentSlide].style.display = "block";
-    }
-  });
-
-  function prevSlide() {
-    slides[currentSlide].style.display = "none";
-    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-    slides[currentSlide].style.display = "block";
-  }
-  
-  function nextSlide() {
-    slides[currentSlide].style.display = "none";
-    currentSlide = (currentSlide + 1) % slides.length;
-    slides[currentSlide].style.display = "block";
-  }
-  
