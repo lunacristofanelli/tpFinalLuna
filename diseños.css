@@ -28,7 +28,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 20rem;
+    width: 30%;
 }
 
 .conteiner-datos-personales {
@@ -37,7 +37,7 @@ main {
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.2);
     width: 90%;
-    height: 22rem;
+    height: 40rem;
     border-radius: 3px;
     align-items: center;
 }
