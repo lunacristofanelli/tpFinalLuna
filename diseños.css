@@ -57,7 +57,7 @@ h1 {
     justify-content: center;
 }
 
-#form-inicio {
+#formInicio {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -366,6 +366,12 @@ li{
     width: 95%;
 }
 
+/* estilo para el form */
 
-
-
+#warnings{
+    width: 160px;
+    align-items: center;
+    color: whitesmoke;
+    font-family: 'Abel', sans-serif;
+    font-size: 15px;
+}

@@ -7,6 +7,7 @@
     <meta charset="UTF-8">
     <title>To do list</title>
     <link rel="stylesheet" href="diseños.css">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
@@ -27,33 +28,35 @@
         <section id="section-datos-personales">
             <h1>To do list</h1>
             <div class="conteiner-datos-personales">
-                <form id="form-inicio">
+                <form id="formInicio">
                     <div class="divFormInicio">
                         <label class="label-inicio" for="nombre">Nombre:</label>
-                        <input class="input-inicio" type="text" id="name" required>
+                        <input class="input-inicio" type="text" id="name">
                     </div>
 
                     <div class="divFormInicio">
                         <label class="label-inicio" for="apellido">Apellido:</label>
-                        <input class="input-inicio" type="text" id="lastName"
-                            required>
+                        <input class="input-inicio" type="text" id="lastName">
+                            
                     </div>
 
                     <div class="divFormInicio">
                         <label class="label-inicio" for="email">Email:</label>
-                        <input class="input-inicio" type="email" id="email" required>
+                        <input class="input-inicio" type="email" id="email"> 
                     </div>
 
                     <div class="divFormInicio">
                         <label class="label-inicio" for="password">Contraseña:</label>
-                        <input class="input-inicio" type="password" id="password" 
-                            required>
+                        <input class="input-inicio" type="password" id="password" >
+                            
                     </div>
 
                     <div class="btns-form">
                         <button class="btn-form" type="reset">Borrar</button>
                         <button class="btn-form" type="submit">Enviar</button>
                     </div>
+
+                    <p class="warnings" id="warnings"></p>
 
                 </form>
 
@@ -63,6 +66,7 @@
                 <button type="button" class="boton-continuar"> <a href="planners.html"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAJ1JREFUSEvt1MENwkAMRNE/nUAn0Ek6CZ2QTmiFTows5RBxYMeWVuKQXHJZzYvHq4jJjybncwLDhv+nooh4AJuk9/CzDwesCfbwFcjwewVxgQvwAvJdQiwgJ46IFmIDXaQEdJAu8ARuuQ9J11+3qgTse7DDE7aBTrgNdMMrwAJkNcPOv/dRqWiRtFV+E/YE1dDjeXuCLnICw+amV/QBkqJAGU8ii88AAAAASUVORK5CYII="/></a></button>
 
             </div>
+
             
         </section>
 

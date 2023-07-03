@@ -1,4 +1,38 @@
-document.getElementById('form-inicio').addEventListener('submit', function (value) {
+//formulario de validación//
+
+const nombre = document.getElementById('name');
+const apellido = document.getElementById('lastName');
+const email = document.getElementById('email');
+const password = document.getElementById('password');
+const parrafo = document.getElementById('warnings')
+
+formInicio.addEventListener("submit", e=>{
+  e.preventDefault()
+  let warnings = "";
+  entrar = false;
+  let regexEmail = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)*(\.\w{2,4})+$/; /* Sacado de Email validation */
+  parrafo.innerHTML = "";
+  if (nombre.value.length < 4){
+    warnings += 'El nombre es muy corto. <br>';
+    entrar = true;
+  }
+  if (!regexEmail.test(email.value)){
+    warnings += 'El email no es valido. <br>';
+    entrar = true;
+  }
+  if (password.value.length < 8){
+    warnings += 'La contraseña no es valida.';
+    entrar = true;
+  }
+  if (entrar){
+    parrafo.innerHTML = warnings;
+  } else{
+    parrafo.innerHTML = "Su formulario ha sido enviado.";
+}
+})
+
+
+document.getElementById('formInicio').addEventListener('submit', function (value) {
     value.preventDefault();   //Evita el envío del formulario si la validación falla
 
     // Accedo a los campos del formulario y se muestran los valores en la consola
@@ -13,7 +47,7 @@ document.getElementById('form-inicio').addEventListener('submit', function (valu
     console.log('Contraseña: ', password);
 })
 
-console.log("luna")
+
 
 function agregarTarea(seccion) {
     // Obtener el valor del campo de entrada de texto correspondiente a la sección
@@ -62,5 +96,5 @@ function eliminarTarea(seccion) {
     }
 }
 
-//imagenes tipo carrousel//
+
 
